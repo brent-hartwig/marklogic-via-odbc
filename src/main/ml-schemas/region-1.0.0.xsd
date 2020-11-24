@@ -1,0 +1,13 @@
+<xs:schema elementFormDefault="qualified" xml:lang="zxx" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sem="http://marklogic.com/semantics" xmlns:es="http://marklogic.com/entity-services">
+  <xs:element name="REGIONKEY" type="xs:int"/>
+  <xs:element name="NAME" type="xs:string"/>
+  <xs:element name="COMMENT" type="xs:string"/>
+  <xs:complexType name="regionType" mixed="true">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="REGIONKEY"/>
+      <xs:element minOccurs="0" ref="NAME"/>
+      <xs:element minOccurs="0" ref="COMMENT"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="region" type="regionType"/>
+</xs:schema>

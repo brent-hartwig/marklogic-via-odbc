@@ -1,0 +1,23 @@
+<xs:schema elementFormDefault="qualified" xml:lang="zxx" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sem="http://marklogic.com/semantics" xmlns:es="http://marklogic.com/entity-services">
+  <xs:element name="CUSTKEY" type="xs:int"/>
+  <xs:element name="NAME" type="xs:string"/>
+  <xs:element name="ADDRESS" type="xs:string"/>
+  <xs:element name="NATIONKEY" type="xs:int"/>
+  <xs:element name="PHONE" type="xs:string"/>
+  <xs:element name="ACCTBAL" type="xs:decimal"/>
+  <xs:element name="MKTSEGMENT" type="xs:string"/>
+  <xs:element name="COMMENT" type="xs:string"/>
+  <xs:complexType name="customerType" mixed="true">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="CUSTKEY"/>
+      <xs:element minOccurs="0" ref="NAME"/>
+      <xs:element minOccurs="0" ref="ADDRESS"/>
+      <xs:element minOccurs="0" ref="NATIONKEY"/>
+      <xs:element minOccurs="0" ref="PHONE"/>
+      <xs:element minOccurs="0" ref="ACCTBAL"/>
+      <xs:element minOccurs="0" ref="MKTSEGMENT"/>
+      <xs:element minOccurs="0" ref="COMMENT"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CUSTOMER" type="customerType"/>
+</xs:schema>

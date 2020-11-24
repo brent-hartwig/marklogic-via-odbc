@@ -1,0 +1,19 @@
+{ "info": { "title": "customer", "version": "1.0.0" },
+    "definitions": {
+        "customer": {
+            "description": "Customer entity",
+            "properties": {
+                "CUSTKEY": { "datatype": "int" },
+                "NAME": { "datatype": "string" },
+                "ADDRESS": { "datatype": "string" },
+                "NATIONKEY": { "datatype": "int" },
+                "PHONE": { "datatype": "string" },
+                "ACCTBAL": { "datatype": "decimal" },
+                "MKTSEGMENT": { "datatype": "string" },
+                "COMMENT": { "datatype": "string" }
+            },
+            "required": ["CUSTKEY"],
+            "primaryKey": "CUSTKEY"
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{ "info": { "title": "nation", "version": "1.0.0" },
+    "definitions": {
+        "nation": {
+            "description": "Nation entity",
+            "properties": {
+							"NATIONKEY": { "datatype": "int" },
+							"NAME": { "datatype": "string" },
+							"REGIONKEY": { "datatype": "int" },
+							"COMMENT": { "datatype": "string" }
+            },
+            "required": ["NATIONKEY"],
+            "primaryKey": "NATIONKEY"
+        }
+    }
+}

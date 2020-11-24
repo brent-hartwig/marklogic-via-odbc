@@ -1,0 +1,26 @@
+{ "info": { "title": "lineitem", "version": "1.0.0" },
+    "definitions": {
+        "lineitem": {
+            "description": "Line item entity",
+            "properties": {
+                "ORDERKEY": { "datatype": "int" },
+                "PARTKEY": { "datatype": "int" },
+                "SUPPKEY": { "datatype": "int" },
+                "LINENUMBER": { "datatype": "int" },
+                "QUANTITY": { "datatype": "int" },
+                "EXTENDEDPRICE": { "datatype": "decimal" },
+                "DISCOUNT": { "datatype": "decimal" },
+                "TAX": { "datatype": "decimal" },
+                "RETURNFLAG": { "datatype": "string" },
+                "LINESTATUS": { "datatype": "string" },
+                "SHIPDATE": { "datatype": "date" },
+                "COMMITDATE": { "datatype": "date" },
+                "RECEIPTDATE": { "datatype": "date" },
+                "SHIPINSTRUCT": { "datatype": "string" },
+                "SHIPMODE": { "datatype": "string" },
+                "COMMENT": { "datatype": "string" }
+            },
+            "required": ["ORDERKEY", "PARTKEY", "SUPPKEY", "LINENUMBER", "QUANTITY", "EXTENDEDPRICE", "LINESTATUS"]
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{ "info": { "title": "orders", "version": "1.0.0" },
+    "definitions": {
+        "orders": {
+            "description": "Orders entity",
+            "properties": {
+								"ORDERKEY": { "datatype": "int" },
+								"CUSTKEY": { "datatype": "int" },
+                "ORDERSTATUS": { "datatype": "string" },
+                "TOTALPRICE": { "datatype": "decimal" },
+                "ORDERDATE": { "datatype": "date" },
+                "ORDERPRIORITY": { "datatype": "string" },
+                "CLERK": { "datatype": "string" },
+                "SHIPPRIORITY": { "datatype": "int" },
+                "COMMENT": { "datatype": "string" }
+            },
+            "required": ["ORDERKEY"],
+            "primaryKey": "ORDERKEY"
+        }
+    }
+}

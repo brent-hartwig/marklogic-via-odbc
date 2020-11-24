@@ -1,0 +1,18 @@
+{ "info": { "title": "supplier", "version": "1.0.0" },
+    "definitions": {
+        "supplier": {
+            "description": "Supplier entity",
+            "properties": {
+                "SUPPKEY": { "datatype": "int" },
+                "NAME": { "datatype": "string" },
+                "ADDRESS": { "datatype": "string" },
+                "NATIONKEY": { "datatype": "int" },
+                "PHONE": { "datatype": "string" },
+                "ACCTBAL": { "datatype": "decimal" },
+                "COMMENT": { "datatype": "string" }
+            },
+            "required": ["SUPPKEY"],
+            "primaryKey": "SUPPKEY"
+        }
+    }
+}

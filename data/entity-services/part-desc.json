@@ -1,0 +1,20 @@
+{ "info": { "title": "part", "version": "1.0.0" },
+    "definitions": {
+        "part": {
+            "description": "Part entity",
+            "properties": {
+                "PARTKEY": { "datatype": "int" },
+								"NAME": { "datatype": "string" },
+								"MFGR": { "datatype": "string" },
+								"BRAND": { "datatype": "string" },
+								"TYPE": { "datatype": "string" },
+								"SIZE": { "datatype": "int" },
+								"CONTAINER": { "datatype": "string" },
+                "RETAILPRICE": { "datatype": "decimal" },
+                "COMMENT": { "datatype": "string" }
+            },
+            "required": ["PARTKEY"],
+            "primaryKey": "PARTKEY"
+        }
+    }
+}

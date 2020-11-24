@@ -1,0 +1,16 @@
+{ "info": { "title": "partsupp", "version": "1.0.0" },
+    "definitions": {
+        "partsupp": {
+            "description": "Part supplier entity",
+            "properties": {
+                "PARTKEY": { "datatype": "int" },
+                "SUPPKEY": { "datatype": "int" },
+                "AVAILQTY": { "datatype": "int" },
+                "SUPPLYCOST": { "datatype": "decimal" },
+                "COMMENT": { "datatype": "string" }
+            },
+            "required": ["PARTKEY"],
+            "primaryKey": "PARTKEY"
+        }
+    }
+}

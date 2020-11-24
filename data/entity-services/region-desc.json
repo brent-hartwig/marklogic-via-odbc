@@ -1,0 +1,14 @@
+{ "info": { "title": "region", "version": "1.0.0" },
+    "definitions": {
+        "region": {
+            "description": "Region entity",
+            "properties": {
+                "REGIONKEY": { "datatype": "int" },
+                "NAME": { "datatype": "string" },
+                "COMMENT": { "datatype": "string" }
+            },
+            "required": ["REGIONKEY"],
+            "primaryKey": "REGIONKEY"
+        }
+    }
+}

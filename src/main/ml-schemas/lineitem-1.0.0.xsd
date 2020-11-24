@@ -1,0 +1,39 @@
+<xs:schema elementFormDefault="qualified" xml:lang="zxx" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sem="http://marklogic.com/semantics" xmlns:es="http://marklogic.com/entity-services">
+  <xs:element name="ORDERKEY" type="xs:int"/>
+  <xs:element name="PARTKEY" type="xs:int"/>
+  <xs:element name="SUPPKEY" type="xs:int"/>
+  <xs:element name="LINENUMBER" type="xs:int"/>
+  <xs:element name="QUANTITY" type="xs:int"/>
+  <xs:element name="EXTENDEDPRICE" type="xs:decimal"/>
+  <xs:element name="DISCOUNT" type="xs:decimal"/>
+  <xs:element name="TAX" type="xs:decimal"/>
+  <xs:element name="RETURNFLAG" type="xs:string"/>
+  <xs:element name="LINESTATUS" type="xs:string"/>
+  <xs:element name="SHIPDATE" type="xs:date"/>
+  <xs:element name="COMMITDATE" type="xs:date"/>
+  <xs:element name="RECEIPTDATE" type="xs:date"/>
+  <xs:element name="SHIPINSTRUCT" type="xs:string"/>
+  <xs:element name="SHIPMODE" type="xs:string"/>
+  <xs:element name="COMMENT" type="xs:string"/>
+  <xs:complexType name="lineitemType" mixed="true">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="ORDERKEY"/>
+      <xs:element ref="PARTKEY"/>
+      <xs:element ref="SUPPKEY"/>
+      <xs:element ref="LINENUMBER"/>
+      <xs:element ref="QUANTITY"/>
+      <xs:element ref="EXTENDEDPRICE"/>
+      <xs:element minOccurs="0" ref="DISCOUNT"/>
+      <xs:element minOccurs="0" ref="TAX"/>
+      <xs:element minOccurs="0" ref="RETURNFLAG"/>
+      <xs:element ref="LINESTATUS"/>
+      <xs:element minOccurs="0" ref="SHIPDATE"/>
+      <xs:element minOccurs="0" ref="COMMITDATE"/>
+      <xs:element minOccurs="0" ref="RECEIPTDATE"/>
+      <xs:element minOccurs="0" ref="SHIPINSTRUCT"/>
+      <xs:element minOccurs="0" ref="SHIPMODE"/>
+      <xs:element minOccurs="0" ref="COMMENT"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="lineitem" type="lineitemType"/>
+</xs:schema>

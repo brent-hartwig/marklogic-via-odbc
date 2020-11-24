@@ -1,0 +1,25 @@
+<xs:schema elementFormDefault="qualified" xml:lang="zxx" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sem="http://marklogic.com/semantics" xmlns:es="http://marklogic.com/entity-services">
+  <xs:element name="ORDERKEY" type="xs:int"/>
+  <xs:element name="CUSTKEY" type="xs:int"/>
+  <xs:element name="ORDERSTATUS" type="xs:string"/>
+  <xs:element name="TOTALPRICE" type="xs:decimal"/>
+  <xs:element name="ORDERDATE" type="xs:date"/>
+  <xs:element name="ORDERPRIORITY" type="xs:string"/>
+  <xs:element name="CLERK" type="xs:string"/>
+  <xs:element name="SHIPPRIORITY" type="xs:int"/>
+  <xs:element name="COMMENT" type="xs:string"/>
+  <xs:complexType name="ordersType" mixed="true">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="ORDERKEY"/>
+      <xs:element minOccurs="0" ref="CUSTKEY"/>
+      <xs:element minOccurs="0" ref="ORDERSTATUS"/>
+      <xs:element minOccurs="0" ref="TOTALPRICE"/>
+      <xs:element minOccurs="0" ref="ORDERDATE"/>
+      <xs:element minOccurs="0" ref="ORDERPRIORITY"/>
+      <xs:element minOccurs="0" ref="CLERK"/>
+      <xs:element minOccurs="0" ref="SHIPPRIORITY"/>
+      <xs:element minOccurs="0" ref="COMMENT"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="orders" type="ordersType"/>
+</xs:schema>

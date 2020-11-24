@@ -1,0 +1,25 @@
+<xs:schema elementFormDefault="qualified" xml:lang="zxx" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sem="http://marklogic.com/semantics" xmlns:es="http://marklogic.com/entity-services">
+  <xs:element name="PARTKEY" type="xs:int"/>
+  <xs:element name="NAME" type="xs:string"/>
+  <xs:element name="MFGR" type="xs:string"/>
+  <xs:element name="BRAND" type="xs:string"/>
+  <xs:element name="TYPE" type="xs:string"/>
+  <xs:element name="SIZE" type="xs:int"/>
+  <xs:element name="CONTAINER" type="xs:string"/>
+  <xs:element name="RETAILPRICE" type="xs:decimal"/>
+  <xs:element name="COMMENT" type="xs:string"/>
+  <xs:complexType name="partType" mixed="true">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="PARTKEY"/>
+      <xs:element minOccurs="0" ref="NAME"/>
+      <xs:element minOccurs="0" ref="MFGR"/>
+      <xs:element minOccurs="0" ref="BRAND"/>
+      <xs:element minOccurs="0" ref="TYPE"/>
+      <xs:element minOccurs="0" ref="SIZE"/>
+      <xs:element minOccurs="0" ref="CONTAINER"/>
+      <xs:element minOccurs="0" ref="RETAILPRICE"/>
+      <xs:element minOccurs="0" ref="COMMENT"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="part" type="partType"/>
+</xs:schema>

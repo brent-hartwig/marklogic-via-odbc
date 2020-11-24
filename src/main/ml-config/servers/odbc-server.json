@@ -1,0 +1,14 @@
+{
+  "server-name": "%%mlODBCAppserverName%%",
+  "server-type": "odbc",
+  "root": "/",
+  "last-login-database": "%%mlLastLoginDbName%%",
+  "group-name": "%%GROUP%%",
+  "port": "%%mlODBCPort%%",
+  "modules-database": "%%mlModulesDbName%%",
+  "content-database": "%%mlODBCDbName%%",
+  "authentication": "%%mlODBCAuth%%",
+  "display-last-login": true,
+  "ssl-certificate-template": "",
+  "ssl-require-client-certificate": false
+}

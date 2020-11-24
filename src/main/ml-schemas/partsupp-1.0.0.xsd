@@ -1,0 +1,17 @@
+<xs:schema elementFormDefault="qualified" xml:lang="zxx" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sem="http://marklogic.com/semantics" xmlns:es="http://marklogic.com/entity-services">
+  <xs:element name="PARTKEY" type="xs:int"/>
+  <xs:element name="SUPPKEY" type="xs:int"/>
+  <xs:element name="AVAILQTY" type="xs:int"/>
+  <xs:element name="SUPPLYCOST" type="xs:decimal"/>
+  <xs:element name="COMMENT" type="xs:string"/>
+  <xs:complexType name="partsuppType" mixed="true">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="PARTKEY"/>
+      <xs:element minOccurs="0" ref="SUPPKEY"/>
+      <xs:element minOccurs="0" ref="AVAILQTY"/>
+      <xs:element minOccurs="0" ref="SUPPLYCOST"/>
+      <xs:element minOccurs="0" ref="COMMENT"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="partsupp" type="partsuppType"/>
+</xs:schema>
