@@ -14,6 +14,8 @@ To deploy:
 
 TODO: Install ML's ODBC driver and configure a data source name (DNS).
 
+TODO: Speak to the PowerShell scripts.
+
 ## Sample Data
 
 TODO: discuss `dbgenConfig` that's defined in `build.gradle` and question defning that info in `gradle.properties`.
